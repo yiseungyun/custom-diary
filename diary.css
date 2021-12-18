@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'paybooc-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    padding: 0;
+}
+
+/* 버튼 스타일 지정 */
+#start {
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 150px;
+    height: 5vh;
+    margin: 1vw;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+#saveBtn, #logoutBtn {
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 8vh;
+    height: 4vh;
+    margin: 1vw;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+#postdelete {
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 8vh;
+    height: 4vh;
+    margin: 1vw;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+#fontButton {
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 80px;
+    height: 5vh;
+    margin: 1vw;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 일기 div 영역 */
+#postForm {
+    margin-top: 18px;
+    position: absolute;
+    top: 10vh;
+    left: 25vw;
+}
+
+/* 일기 내용 작성 칸 */
+#post {
+    width: 50vw;
+} 
+
+/* 작성된 일기 내용 */
+.newpost {
+    font-size: 2vh;
+    line-height: 3vh;
+}

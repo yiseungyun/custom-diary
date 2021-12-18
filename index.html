@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="diary.css">
+</head>
+<body>
+    <h1>오늘의 일기</h1>
+    <!--폰트 선택-->
+    <div id = "mainForm1">
+        <table>
+            <tr>
+                <td><button id = "fontButton" value = "1" onclick = "fontButton(this)" style="font-family: 'GowunDodum-Regular';">폰트1</button></td>
+                <td><button id = "fontButton" value = "2" onclick = "fontButton(this)" style="font-family: 'paybooc-Bold';">폰트2</button></td>
+                <td><button id = "fontButton" value = "3" onclick = "fontButton(this)" style="font-family: 'InfinitySans-RegularA1';">폰트3</button></td>
+                <td><button id = "fontButton" value = "4" onclick = "fontButton(this)" style="font-family: 'DungGeunMo';">폰트4</button></td>
+            </tr>
+        </table>
+    </div>
+    <div id = "postForm" class = "hidden">
+        <form action = "">
+                <!--날짜 입력-->
+                <input type = "date" id = "date">
+                <br>
+                <!--기분 입력-->
+                <br>
+                <!--내용 입력-->
+                <textarea id = "post" rows = "5" cols = "50"></textarea>
+                <br>
+                <button id = "saveBtn">저장</button>
+        </form>
+        <ul id = "postList"></ul>
+        <button id = "logoutBtn" onclick = "logoutButton()">종료</button>
+    </div>
+    <div id = "mainForm2">
+        <button id = "start" onclick = "startDiary()">일기쓰러가기</button>
+    </div>
+    <script src = "diary.js"></script>
+</body>
+</html>
