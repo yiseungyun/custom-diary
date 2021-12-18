@@ -8,6 +8,7 @@ var saveButton = document.querySelector("#saveBtn");
 var dateContent = document.querySelector("#date");
 var postContent = document.querySelector("#post");
 var postList = document.querySelector("#postList");
+var bgBtn;
 
 let diaryList = [];
 
@@ -76,6 +77,31 @@ function newPost(newDiary) // 일기 추가
         for (let i = 0; i < deleteBtnList.length; i++)
             deleteBtnList[i].style.fontFamily = "DungGeunMo";
     }
+
+    if (localStorage.getItem("buttoncolor") == 1)
+    {
+        dB = document.querySelectorAll("#postdelete");
+        for (let i = 0; i < dB.length; i++)
+            dB[i].style.backgroundColor = "rgb(130, 153, 134)";
+    }
+    else if (localStorage.getItem("buttoncolor") == 2)
+    {
+        dB = document.querySelectorAll("#postdelete");
+        for (let i = 0; i < dB.length; i++)
+            dB[i].style.backgroundColor = "rgb(95, 77, 77)";
+    }
+    else if (localStorage.getItem("buttoncolor") == 3)
+    {
+        dB = document.querySelectorAll("#postdelete");
+        for (let i = 0; i < dB.length; i++)
+            dB[i].style.backgroundColor = "rgb(166, 185, 211)";
+    } 
+    else if (localStorage.getItem("buttoncolor") == 4)
+    {
+        dB = document.querySelectorAll("#postdelete");
+        for (let i = 0; i < dB.length; i++)
+            dB[i].style.backgroundColor = "rgb(190, 183, 154)";
+    }
 }
 
 function handleToDiary(event) {
@@ -94,7 +120,6 @@ function handleToDiary(event) {
 
 // 폰트 버튼을 눌렀을 때 일기장 페이지를 누른 폰트로 변경
 function fontButton(btn) {
-    fontBtn = btn.value;
     if (btn.value == 1)
     {
         font = 1;
@@ -104,6 +129,7 @@ function fontButton(btn) {
         document.querySelector("#start").style.fontFamily = "GowunDodum-Regular";
         document.querySelector("#logoutBtn").style.fontFamily = "GowunDodum-Regular";
         document.querySelector("input").style.fontFamily = "GowunDodum-Regular";
+        document.querySelector("#resetButton").style.fontFamily = "GowunDodum-Regular";
     }
     else if (btn.value == 2)
     {
@@ -114,6 +140,7 @@ function fontButton(btn) {
         document.querySelector("#start").style.fontFamily = "paybooc-Bold";
         document.querySelector("#logoutBtn").style.fontFamily = "paybooc-Bold";
         document.querySelector("input").style.fontFamily = "paybooc-Bold";
+        document.querySelector("#resetButton").style.fontFamily = "paybooc-Bold";
     }
     else if (btn.value == 3)
     {
@@ -123,7 +150,8 @@ function fontButton(btn) {
         document.querySelector("#saveBtn").style.fontFamily = "InfinitySans-RegularA1";
         document.querySelector("#start").style.fontFamily = "InfinitySans-RegularA1";
         document.querySelector("#logoutBtn").style.fontFamily = "InfinitySans-RegularA1";
-        document.querySelector("input").style.fontFamily = "InfinitySans-RegularA1"
+        document.querySelector("input").style.fontFamily = "InfinitySans-RegularA1";
+        document.querySelector("#resetButton").style.fontFamily = "InfinitySans-RegularA1";
     }
     else if (btn.value == 4)
     {
@@ -134,8 +162,83 @@ function fontButton(btn) {
         document.querySelector("#start").style.fontFamily = "DungGeunMo";
         document.querySelector("#logoutBtn").style.fontFamily = "DungGeunMo";
         document.querySelector("input").style.fontFamily = "DungGeunMo";
+        document.querySelector("#resetButton").style.fontFamily = "DungGeunMo";
     }
     localStorage.setItem("font", font);
+}
+
+// 배경색 버튼 눌렀을 때 원하는 배경 색상으로 변경
+function bgButton(btn) {
+    if (btn.value == 1)
+    {
+        background = 1;
+        document.querySelector("html").style.backgroundColor = "rgb(220, 238, 227)";
+    }
+    else if (btn.value == 2)
+    {
+        background = 2;
+        document.querySelector("html").style.backgroundColor = "rgb(255, 240, 244)";
+    }
+    else if (btn.value == 3)
+    {
+        background = 3;
+        document.querySelector("html").style.backgroundColor = "rgb(230, 230, 230)";
+    }
+    else if (btn.value == 4)
+    {
+        background = 4;
+        document.querySelector("html").style.backgroundColor = "rgb(214, 216, 245)";
+    }
+    localStorage.setItem("background", background);
+}
+
+// 버튼색 버튼 눌렀을 때 원하는 버튼 색상으로 변경
+function buttonColor(btn) {
+    if (btn.value == 1)
+    {
+        buttoncolor = 1;
+        fB = document.querySelectorAll("#fontButton");
+        for (let i = 0; i < fB.length; i++)
+            fB[i].style.backgroundColor = "rgb(130, 153, 134)";
+        document.querySelector("#saveBtn").style.backgroundColor = "rgb(130, 153, 134)";
+        document.querySelector("#resetButton").style.backgroundColor = "rgb(130, 153, 134)";
+        document.querySelector("#start").style.backgroundColor = "rgb(130, 153, 134)";
+        document.querySelector("#logoutBtn").style.backgroundColor = "rgb(130, 153, 134)";
+    }
+    else if (btn.value == 2)
+    {
+        buttoncolor = 2;
+        fB = document.querySelectorAll("#fontButton");
+        for (let i = 0; i < fB.length; i++)
+            fB[i].style.backgroundColor = "rgb(95, 77, 77)";
+        document.querySelector("#saveBtn").style.backgroundColor = "rgb(95, 77, 77)";
+        document.querySelector("#resetButton").style.backgroundColor = "rgb(95, 77, 77)";
+        document.querySelector("#start").style.backgroundColor = "rgb(95, 77, 77)";
+        document.querySelector("#logoutBtn").style.backgroundColor = "rgb(95, 77, 77)";
+    }
+    else if (btn.value == 3)
+    {
+        buttoncolor = 3;
+        fB = document.querySelectorAll("#fontButton");
+        for (let i = 0; i < fB.length; i++)
+            fB[i].style.backgroundColor = "rgb(166, 185, 211)";
+        document.querySelector("#saveBtn").style.backgroundColor = "rgb(166, 185, 211)";
+        document.querySelector("#resetButton").style.backgroundColor = "rgb(166, 185, 211)";
+        document.querySelector("#start").style.backgroundColor = "rgb(166, 185, 211)";
+        document.querySelector("#logoutBtn").style.backgroundColor = "rgb(166, 185, 211)";
+    }
+    else if (btn.value == 4)
+    {
+        buttoncolor = 4;
+        fB = document.querySelectorAll("#fontButton");
+        for (let i = 0; i < fB.length; i++)
+            fB[i].style.backgroundColor = "rgb(190, 183, 154)";
+        document.querySelector("#saveBtn").style.backgroundColor = "rgb(190, 183, 154)";
+        document.querySelector("#resetButton").style.backgroundColor = "rgb(190, 183, 154)";
+        document.querySelector("#start").style.backgroundColor = "rgb(190, 183, 154)";
+        document.querySelector("#logoutBtn").style.backgroundColor = "rgb(190, 183, 154)";
+    }
+    localStorage.setItem("buttoncolor", buttoncolor);
 }
 
 // 일기 쓰러가기 버튼을 누르면 다이어리 입력창이 나타나게 함
@@ -180,7 +283,8 @@ if (localStorage.getItem("font") == 1)
     document.querySelector("#saveBtn").style.fontFamily = "GowunDodum-Regular";
     document.querySelector("#start").style.fontFamily = "GowunDodum-Regular";
     document.querySelector("#logoutBtn").style.fontFamily = "GowunDodum-Regular";
-    document.querySelector("input").style.fontFamily = "GowunDodum-Regular";;
+    document.querySelector("input").style.fontFamily = "GowunDodum-Regular";
+    document.querySelector("#resetButton").style.fontFamily = "GowunDodum-Regular";
 }
 else if (localStorage.getItem("font") == 2)
 {
@@ -190,6 +294,7 @@ else if (localStorage.getItem("font") == 2)
     document.querySelector("#start").style.fontFamily = "paybooc-Bold";
     document.querySelector("#logoutBtn").style.fontFamily = "paybooc-Bold";
     document.querySelector("input").style.fontFamily = "paybooc-Bold";
+    document.querySelector("#resetButton").style.fontFamily = "paybooc-Bold";
 }
 else if (localStorage.getItem("font") == 3)
 {
@@ -198,7 +303,8 @@ else if (localStorage.getItem("font") == 3)
     document.querySelector("#saveBtn").style.fontFamily = "InfinitySans-RegularA1";
     document.querySelector("#start").style.fontFamily = "InfinitySans-RegularA1";
     document.querySelector("#logoutBtn").style.fontFamily = "InfinitySans-RegularA1";
-    document.querySelector("input").style.fontFamily = "InfinitySans-RegularA1"
+    document.querySelector("input").style.fontFamily = "InfinitySans-RegularA1";
+    document.querySelector("#resetButton").style.fontFamily = "InfinitySans-RegularA1";
 }
 else if (localStorage.getItem("font") == 4)
 {
@@ -208,6 +314,77 @@ else if (localStorage.getItem("font") == 4)
     document.querySelector("#start").style.fontFamily = "DungGeunMo";
     document.querySelector("#logoutBtn").style.fontFamily = "DungGeunMo";
     document.querySelector("input").style.fontFamily = "DungGeunMo";
+    document.querySelector("#resetButton").style.fontFamily = "DungGeunMo";
+}
+
+// 페이지 새로고침해도 설정한 배경 유지
+if (localStorage.getItem("background") == 1)
+{
+    document.querySelector("html").style.backgroundColor = "rgb(220, 238, 227)";
+}
+else if (localStorage.getItem("background") == 2)
+{
+    document.querySelector("html").style.backgroundColor = "rgb(255, 240, 244)";
+}
+else if (localStorage.getItem("background") == 3)
+{
+    document.querySelector("html").style.backgroundColor = "rgb(230, 230, 230)";
+}
+else if (localStorage.getItem("background") == 4)
+{
+    document.querySelector("html").style.backgroundColor = "rgb(214, 216, 245)";
+}
+
+// 페이지 새로고침해도 설정한 버튼색 유지
+if (localStorage.getItem("buttoncolor") == 1)
+{
+    fB = document.querySelectorAll("#fontButton");
+    for (let i = 0; i < fB.length; i++)
+        fB[i].style.backgroundColor = "rgb(130, 153, 134)";
+    document.querySelector("#saveBtn").style.backgroundColor = "rgb(130, 153, 134)";
+    document.querySelector("#resetButton").style.backgroundColor = "rgb(130, 153, 134)";
+    document.querySelector("#start").style.backgroundColor = "rgb(130, 153, 134)";
+    document.querySelector("#logoutBtn").style.backgroundColor = "rgb(130, 153, 134)";
+}
+else if (localStorage.getItem("buttoncolor") == 2)
+{
+    fB = document.querySelectorAll("#fontButton");
+    for (let i = 0; i < fB.length; i++)
+        fB[i].style.backgroundColor = "rgb(95, 77, 77)";
+    document.querySelector("#saveBtn").style.backgroundColor = "rgb(95, 77, 77)";
+    document.querySelector("#resetButton").style.backgroundColor = "rgb(95, 77, 77)";
+    document.querySelector("#start").style.backgroundColor = "rgb(95, 77, 77)";
+    document.querySelector("#logoutBtn").style.backgroundColor = "rgb(95, 77, 77)";
+}
+else if (localStorage.getItem("buttoncolor") == 3)
+{
+    fB = document.querySelectorAll("#fontButton");
+    for (let i = 0; i < fB.length; i++)
+        fB[i].style.backgroundColor = "rgb(166, 185, 211)";
+    document.querySelector("#saveBtn").style.backgroundColor = "rgb(166, 185, 211)";
+    document.querySelector("#resetButton").style.backgroundColor = "rgb(166, 185, 211)";
+    document.querySelector("#start").style.backgroundColor = "rgb(166, 185, 211)";
+    document.querySelector("#logoutBtn").style.backgroundColor = "rgb(166, 185, 211)";
+} 
+else if (localStorage.getItem("buttoncolor") == 4)
+{
+    fB = document.querySelectorAll("#fontButton");
+    for (let i = 0; i < fB.length; i++)
+        fB[i].style.backgroundColor = "rgb(190, 183, 154)";
+    document.querySelector("#saveBtn").style.backgroundColor = "rgb(190, 183, 154)";
+    document.querySelector("#resetButton").style.backgroundColor = "rgb(190, 183, 154)";
+    document.querySelector("#start").style.backgroundColor = "rgb(190, 183, 154)";
+    document.querySelector("#logoutBtn").style.backgroundColor = "rgb(190, 183, 154)";
+}
+
+
+// 설정 초기화 - 모든 설정 reset
+function resetButton() 
+{
+    localStorage.removeItem("font");
+    localStorage.removeItem("background");
+    localStorage.removeItem("buttoncolor");
+    location.reload();
 }
 
 saveButton.addEventListener("click", handleToDiary);

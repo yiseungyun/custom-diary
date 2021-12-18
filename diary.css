@@ -89,6 +89,17 @@ ul {
     border-radius: 5px;
 }
 
+#resetButton {
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 105px;
+    height: 5vh;
+    margin: 1vw;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
 h1 {
     text-align: center;
 }
@@ -110,4 +121,15 @@ h1 {
 .newpost {
     font-size: 2vh;
     line-height: 3vh;
+}
+
+#background, #btncolor {
+    margin: 0 auto;
+}
+
+#bgButton, #buttonColor {
+    margin-left: 1.5vw;
+    margin-right: 1.5wv;
+    width: 80px; 
+    height: 80px;
 }

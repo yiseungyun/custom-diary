@@ -12,6 +12,7 @@
     <!--폰트 선택-->
     <div id = "mainForm1">
         <table>
+            <h3>폰트</h3>
             <tr>
                 <td><button id = "fontButton" value = "1" onclick = "fontButton(this)" style="font-family: 'GowunDodum-Regular';">폰트1</button></td>
                 <td><button id = "fontButton" value = "2" onclick = "fontButton(this)" style="font-family: 'paybooc-Bold';">폰트2</button></td>
@@ -19,13 +20,33 @@
                 <td><button id = "fontButton" value = "4" onclick = "fontButton(this)" style="font-family: 'DungGeunMo';">폰트4</button></td>
             </tr>
         </table>
+        <br>
+        <table id = "background">
+            <h3>배경색</h3>
+            <tr>
+                <td><button id = "bgButton" value = "1" onclick = "bgButton(this)" style ="background-color: rgb(220, 238, 227); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "bgButton" value = "2" onclick = "bgButton(this)" style ="background-color: rgb(255, 240, 244); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "bgButton" value = "3" onclick = "bgButton(this)" style ="background-color: rgb(230, 230, 230); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "bgButton" value = "4" onclick = "bgButton(this)" style ="background-color: rgb(214, 216, 245); border: none; border-radius: 50%;"></button></td>
+            </tr>
+        </table>
+        <table id = "btncolor">
+            <h3>버튼색</h3>
+            <tr>
+                <td><button id = "buttonColor" value = "1" onclick = "buttonColor(this)" style ="background-color: rgb(130, 153, 134); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "buttonColor" value = "2" onclick = "buttonColor(this)" style ="background-color: rgb(95, 77, 77); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "buttonColor" value = "3" onclick = "buttonColor(this)" style ="background-color: rgb(166, 185, 211); border: none; border-radius: 50%;"></button></td>
+                <td><button id = "buttonColor" value = "4" onclick = "buttonColor(this)" style ="background-color: rgb(190, 183, 154); border: none; border-radius: 50%;"></button></td>
+            </tr>
+        </table>
+        <br><br>
+        <button id = "resetButton" onclick = "resetButton()">설정 초기화</button>
     </div>
     <div id = "postForm" class = "hidden">
         <form action = "">
                 <!--날짜 입력-->
                 <input type = "date" id = "date">
                 <br>
-                <!--기분 입력-->
                 <br>
                 <!--내용 입력-->
                 <textarea id = "post" rows = "5" cols = "50"></textarea>
@@ -36,6 +57,7 @@
         <button id = "logoutBtn" onclick = "logoutButton()">종료</button>
     </div>
     <div id = "mainForm2">
+        <br>
         <button id = "start" onclick = "startDiary()">일기쓰러가기</button>
     </div>
     <script src = "diary.js"></script>
