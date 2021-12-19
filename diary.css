@@ -94,7 +94,7 @@ ul {
     color: white;
     width: 105px;
     height: 5vh;
-    margin: 1vw;
+    margin: 0.7vw;
     font-size: medium;
     border: none;
     border-radius: 5px;
@@ -128,8 +128,8 @@ h1 {
 }
 
 #bgButton, #buttonColor {
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     width: 80px; 
     height: 80px;
 }
