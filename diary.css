@@ -123,13 +123,13 @@ h1 {
     line-height: 3vh;
 }
 
-#background, #btncolor {
+#fonttable, #background, #btncolor {
     margin: 0 auto;
 }
 
 #bgButton, #buttonColor {
     margin-left: 1.5vw;
-    margin-right: 1.5wv;
+    margin-right: 1.5vw;
     width: 80px; 
     height: 80px;
 }
